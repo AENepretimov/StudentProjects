@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.ChangeStudentFragment"
-    android:background="#000">
+    android:background="#FFEB3B"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_test"
-        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_margin="12dp"/>
+
+    <EditText
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Save fragment" />
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_margin="12dp"/>
+
+    <EditText
+        android:id="@+id/et_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="group"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_margin="12dp"/>
+
+    <EditText
+        android:id="@+id/et_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="score"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
-        android:layout_gravity="right|bottom"/>
+        android:text="save student"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_margin="12dp"/>
 
-</FrameLayout>
+
+
+</LinearLayout>

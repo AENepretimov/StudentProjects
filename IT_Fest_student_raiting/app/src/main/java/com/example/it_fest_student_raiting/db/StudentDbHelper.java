@@ -43,6 +43,28 @@ public class StudentDbHelper extends SQLiteOpenHelper {
         onCreate( sqLiteDatabase );
     }
 
+    public int changeStudent(Student student){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put(StudentReaderContract.StudentEntry.COLUMN_NAME, student.getName());
+        cv.put(StudentReaderContract.StudentEntry.COLUMN_GR, student.getGr());
+        cv.put(StudentReaderContract.StudentEntry.COLUMN_SCORE, student.getScore());
+
+
+        return db.update(StudentReaderContract.StudentEntry.TABLE_NAME,
+                cv,
+                StudentReaderContract.StudentEntry.COLUMN_ID + " = ?",
+                new String[]{ String.valueOf(student.getId()) });
+    }
+
+    public int deleteStudent(Student student){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(StudentReaderContract.StudentEntry.TABLE_NAME,
+                StudentReaderContract.StudentEntry.COLUMN_ID + " = " + student.getId(),
+                null);
+    }
+
     public long addStudent(Student student){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv =new ContentValues();
