@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = findViewById(R.id.fl_main);
 
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        AppCompatButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
