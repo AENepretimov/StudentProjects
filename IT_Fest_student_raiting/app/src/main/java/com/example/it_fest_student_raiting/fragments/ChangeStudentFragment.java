@@ -62,6 +62,8 @@ public class ChangeStudentFragment extends Fragment {
                 dbHelper.changeStudent(testStudent);
 
                 getActivity().getSupportFragmentManager().beginTransaction().remove(ChangeStudentFragment.this).commit();
+
+                dbHelper.close();
             }
         });
 

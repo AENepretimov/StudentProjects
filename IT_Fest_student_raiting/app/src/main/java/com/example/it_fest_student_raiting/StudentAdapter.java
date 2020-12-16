@@ -67,8 +67,10 @@ public class StudentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         if (position == 0){
             ((MyViewHolder)holder).ll_item.setBackground(context.getDrawable(R.drawable.ic_golden_back));
         }
-
         if (position == 1){
+            ((MyViewHolder)holder).ll_item.setBackground(context.getDrawable(R.drawable.ic_silver_back));
+        }
+        if (position == 2){
             ((MyViewHolder)holder).ll_item.setBackground(context.getDrawable(R.drawable.ic_bronze_back));
         }
 
@@ -98,8 +100,6 @@ public class StudentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public int getItemCount() {
         return students.size();
     }
-
-
 
 
 
