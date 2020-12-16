@@ -48,25 +48,7 @@ public class StudentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
 
-    @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, @NonNull List<Object> payloads) {
-        super.onBindViewHolder(holder, position, payloads);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ChangeStudentFragment changeStudentFragment = new ChangeStudentFragment();
 
-                Bundle bundle = new Bundle();
-                bundle.putSerializable(MainActivity.MSG_NAME, students.get(position));
-                changeStudentFragment.setArguments(bundle);
-
-                ((AppCompatActivity)context).getSupportFragmentManager()
-                        .beginTransaction()
-                        .add(R.id.fl_main, changeStudentFragment)
-                        .commit();
-            }
-        });
-    }
 
 
 
@@ -93,6 +75,23 @@ public class StudentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         ((MyViewHolder)holder).tv_name.setText(student.getName());
         ((MyViewHolder)holder).tv_gr.setText("Group: " + student.getGr());
         ((MyViewHolder)holder).tv_score.setText( "Score: " + student.getScore().toString());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ChangeStudentFragment changeStudentFragment = new ChangeStudentFragment();
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(MainActivity.MSG_NAME, students.get(position));
+                changeStudentFragment.setArguments(bundle);
+
+                ((AppCompatActivity)context).getSupportFragmentManager()
+                        .beginTransaction()
+                        .add(R.id.fl_main, changeStudentFragment)
+                        .commit();
+            }
+        });
+
     }
 
     @Override
